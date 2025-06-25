@@ -1,871 +1,744 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lido La Perla - Gaeta | La tua oasi di relax sulla spiaggia di Serapo</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <title>Lido La Perla - Spiaggia Serapo Gaeta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* INIZIO STILI CSS COMPLETI (simulando Tailwind CSS non ottimizzato + stili personalizzati) */
-        /* Nota: In un ambiente di produzione, il CSS di Tailwind verrebbe compilato e ottimizzato,
-           risultando in un file molto più piccolo. Qui, per semplicità "tutto in uno",
-           questi stili simulano l'output finale ma sarebbero MOLTO più estesi
-           se si includessero tutte le utility di Tailwind non usate. */
-
+        /* Custom Tailwind Colors */
         :root {
-            --color-primary: #1A5276;
-            --color-secondary: #40B5AD;
-            --color-accent: #FF7F50;
-            --color-background: #F5DEB3;
-            --color-textdark: #333333;
-            --color-textlight: #FFFFFF;
-            --color-goldstar: #FFD700;
+            --color-blue-600: #2563eb;
+            --color-blue-700: #1d4ed8;
+            --color-blue-800: #1e40af;
+            --color-sand-50: #fffefb; /* Almost white with a hint of warmth */
+            --color-sand-100: #fefce8;
         }
 
-        html { scroll-behavior: smooth; }
+        .bg-blue-600 { background-color: var(--color-blue-600); }
+        .hover\:bg-blue-700:hover { background-color: var(--color-blue-700); }
+        .text-blue-600 { color: var(--color-blue-600); }
+        .hover\:text-blue-600:hover { color: var(--color-blue-600); }
+        .bg-blue-100 { background-color: #dbeafe; } /* Lighter blue for icons */
+        .bg-blue-700 { background-color: var(--color-blue-700); }
+        .text-blue-800 { color: var(--color-blue-800); }
+        .hover\:text-blue-800:hover { color: var(--color-blue-800); }
+        .bg-sand-50 { background-color: var(--color-sand-50); }
+        .bg-sand-100 { background-color: var(--color-sand-100); }
+
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-textdark);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            font-family: 'Lato', sans-serif;
+            scroll-behavior: smooth;
         }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-
-        /* General Utilities */
-        .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
-        @media (min-width: 640px) { .container { max-width: 640px; } }
-        @media (min-width: 768px) { .container { max-width: 768px; } }
-        @media (min-width: 1024px) { .container { max-width: 1024px; } }
-        @media (min-width: 1280px) { .container { max-width: 1280px; } }
-        @media (min-width: 1536px) { .container { max-width: 1536px; } }
-
-        /* Colors */
-        .bg-primary { background-color: var(--color-primary); }
-        .bg-secondary { background-color: var(--color-secondary); }
-        .bg-accent { background-color: var(--color-accent); }
-        .bg-background { background-color: var(--color-background); }
-        .bg-textlight { background-color: var(--color-textlight); }
-        .text-primary { color: var(--color-primary); }
-        .text-secondary { color: var(--color-secondary); }
-        .text-accent { color: var(--color-accent); }
-        .text-background { color: var(--color-background); }
-        .text-textdark { color: var(--color-textdark); }
-        .text-textlight { color: var(--color-textlight); }
-        .text-goldstar { color: var(--color-goldstar); }
-        .text-gray-600 { color: #4b5563; }
-        .text-gray-700 { color: #374151; }
-        .text-gray-200 { color: #e5e7eb; }
-        .text-gray-400 { color: #9ca3af; }
-
-        /* Typography */
-        .text-sm { font-size: 0.875rem; }
-        .text-base { font-size: 1rem; }
-        .text-lg { font-size: 1.125rem; }
-        .text-xl { font-size: 1.25rem; }
-        .text-2xl { font-size: 1.5rem; }
-        .text-3xl { font-size: 1.875rem; }
-        .text-4xl { font-size: 2.25rem; }
-        .text-6xl { font-size: 3.75rem; }
-        .font-bold { font-weight: 700; }
-        .font-semibold { font-weight: 600; }
-        .italic { font-style: italic; }
-        .text-center { text-align: center; }
-        .text-left { text-align: left; }
-        .not-italic { font-style: normal; }
-
-        /* Layout & Flexbox */
-        .flex { display: flex; }
-        .items-center { align-items: center; }
-        .justify-center { justify-content: center; }
-        .justify-between { justify-content: space-between; }
-        .flex-col { flex-direction: column; }
-        .space-x-6 > *:not(:first-child) { margin-left: 1.5rem; }
-        .space-y-3 > *:not(:first-child) { margin-top: 0.75rem; }
-        .space-y-2 > *:not(:first-child) { margin-top: 0.5rem; }
-        .grid { display: grid; }
-        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-        .gap-4 { gap: 1rem; }
-        .gap-8 { gap: 2rem; }
-
-        /* Spacing */
-        .px-4 { padding-left: 1rem; padding-right: 1rem; }
-        .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-        .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-        .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
-        .py-16 { padding-top: 4rem; padding-bottom: 4rem; }
-        .p-4 { padding: 1rem; }
-        .p-6 { padding: 1.5rem; }
-        .p-8 { padding: 2rem; }
-        .mb-2 { margin-bottom: 0.5rem; }
-        .mb-4 { margin-bottom: 1rem; }
-        .mb-6 { margin-bottom: 1.5rem; }
-        .mb-8 { margin-bottom: 2rem; }
-        .mb-12 { margin-bottom: 3rem; }
-        .mb-20 { margin-bottom: 5rem; }
-        .mt-1 { margin-top: 0.25rem; }
-        .mt-2 { margin-top: 0.5rem; }
-        .mt-3 { margin-top: 0.75rem; }
-        .mt-4 { margin-top: 1rem; }
-        .mt-6 { margin-top: 1.5rem; }
-        .mt-8 { margin-top: 2rem; }
-        .mt-12 { margin-top: 3rem; }
-        .mr-2 { margin-right: 0.5rem; }
-        .mr-4 { margin-right: 1rem; }
-        .pr-8 { padding-right: 2rem; }
-        .pl-8 { padding-left: 2rem; }
-        .mx-auto { margin-left: auto; margin-right: auto; }
-        .mx-1 { margin-left: 0.25rem; margin-right: 0.25rem; }
-
-        /* Sizing */
-        .w-full { width: 100%; }
-        .h-screen { height: 100vh; }
-        .h-48 { height: 12rem; }
-        .h-64 { height: 16rem; }
-        .h-40 { height: 10rem; }
-        .w-3 { width: 0.75rem; }
-        .h-3 { height: 0.75rem; }
-        .max-w-xl { max-width: 36rem; }
-        .max-w-2xl { max-width: 42rem; }
-        .max-w-3xl { max-width: 48rem; }
-        .max-w-4xl { max-width: 56rem; }
-
-        /* Positioning */
-        .relative { position: relative; }
-        .absolute { position: absolute; }
-        .fixed { position: fixed; }
-        .sticky { position: sticky; }
-        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
-        .top-0 { top: 0; }
-        .bottom-10 { bottom: 2.5rem; }
-        .left-0 { left: 0; }
-        .right-0 { right: 0; }
-        .z-10 { z-index: 10; }
-        .z-40 { z-index: 40; }
-        .z-\[9999\] { z-index: 9999; }
-
-        /* Borders & Shadows */
-        .rounded-lg { border-radius: 0.5rem; }
-        .rounded-full { border-radius: 9999px; }
-        .shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
-        .shadow-md { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
-        .border { border-width: 1px; }
-        .border-secondary { border-color: var(--color-secondary); }
-
-        /* Overflow */
-        .overflow-hidden { overflow: hidden; }
-
-        /* Images */
-        .object-cover { object-fit: cover; }
-
-        /* Opacity & Transitions */
-        .opacity-0 { opacity: 0; }
-        .opacity-100 { opacity: 1; }
-        .transition { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-        .duration-300 { transition-duration: 300ms; }
-        .duration-500 { transition-duration: 500ms; }
-        .hover\:text-secondary:hover { color: var(--color-secondary); }
-        .hover\:bg-emerald-600:hover { background-color: #059669; }
-        .hover\:bg-orange-600:hover { background-color: #ea580c; }
-        .group:hover .group-hover\:scale-110 { transform: scale(1.1); }
-        .group:hover .group-hover\:text-primary { color: var(--color-primary); }
-        .group:hover .group-hover\:bg-opacity-30 { background-color: rgba(26, 82, 118, 0.3); }
-        .group:hover .group-hover\:opacity-100 { opacity: 1; }
-        .hover\:shadow-xl:hover { box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1); }
-        .transform { transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)); }
-        .hover\:scale-105:hover { --tw-scale-x: 1.05; --tw-scale-y: 1.05; }
-        .focus\:outline-none:focus { outline: 2px solid transparent; outline-offset: 2px; }
-        .focus\:ring-2:focus { box-shadow: ring; }
-        .focus\:ring-secondary:focus { --tw-ring-color: var(--color-secondary); }
-        .focus\:ring-offset-2:focus { --tw-ring-offset-width: 2px; }
-        .focus\:ring-offset-primary:focus { --tw-ring-offset-color: var(--color-primary); }
-        .focus\:ring-goldstar:focus { --tw-ring-color: var(--color-goldstar); }
-
-        /* Display utilities */
-        .hidden { display: none; }
-        .block { display: block; }
-        .inline-block { display: inline-block; }
-        .flex-wrap { flex-wrap: wrap; }
-
-        /* Media queries */
-        @media (min-width: 768px) { /* md: */
-            .md\:block { display: block; }
-            .md\:hidden { display: none; }
-            .md\:flex { display: flex; }
-            .md\:text-4xl { font-size: 2.25rem; }
-            .md\:text-6xl { font-size: 3.75rem; }
-            .md\:text-2xl { font-size: 1.5rem; }
-            .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-            .md\:w-1\/2 { width: 50%; }
-            .md\:mb-0 { margin-bottom: 0; }
-            .md\:pr-8 { padding-right: 2rem; }
-            .md\:pl-8 { padding-left: 2rem; }
-            .md\:order-1 { order: 1; }
-            .md\:order-2 { order: 2; }
+        .serif-title {
+            font-family: 'Playfair Display', serif;
         }
-        @media (min-width: 1024px) { /* lg: */
-            .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .hero-image {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-
-        /* Hero Section specific styles */
-        .hero-overlay { background-color: rgba(26, 82, 118, 0.7); }
-        .bg-cover { background-size: cover; }
-        .bg-center { background-position: center; }
-
-        /* CSS Animations */
-        .wave-animation { animation: wave 8s ease-in-out infinite alternate; }
-        @keyframes wave {
-            0% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(2deg); }
-            100% { transform: translateY(0) rotate(0deg); }
-        }
-        .pulse { animation: pulse 2s infinite; }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        .fade-in { animation: fadeIn 1.5s ease-in; }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        .slide-up { animation: slideUp 1s ease-out; }
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        .bounce { animation: bounce 2s infinite; }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        /* Preloader */
-        .preloader-transition { transition: opacity 0.5s ease-out; }
-        .pointer-events-none { pointer-events: none; }
-
-        /* Testimonial Slider */
-        .testimonial-slide {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
+        
+        /* Wave Divider */
+        .wave-divider {
             position: absolute;
-            width: 100%;
-            top: 0;
+            bottom: 0;
             left: 0;
+            width: 100%;
+            height: 60px; /* Adjust height as needed */
+            overflow: hidden;
         }
-        .testimonial-slide.active {
-            opacity: 1;
+        .wave-divider svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .wave-divider path {
+            fill: white; /* Color of the wave */
+        }
+
+        /* Animations */
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fadeInScale {
+            animation: fadeInScale 0.8s ease-out forwards;
+        }
+
+        .animate-slideInUp {
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        .service-icon {
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover .service-icon {
+            transform: translateY(-5px);
+        }
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .menu-item-image {
+            transition: transform 0.3s ease;
+        }
+        .menu-item:hover .menu-item-image {
+            transform: scale(1.05);
+        }
+
+        .instagram-gallery > div {
             position: relative;
+            overflow: hidden;
         }
-        .testimonial-dot.active-dot { background-color: var(--color-accent); }
-        /* FINE STILI CSS */
+        .instagram-gallery img {
+            transition: transform 0.3s ease;
+        }
+        .instagram-gallery > div:hover img {
+            transform: scale(1.1);
+        }
+        .instagram-gallery .absolute {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .instagram-gallery > div:hover .absolute {
+            opacity: 1;
+        }
+
+        /* Testimonial Slider Scrollbar Hide */
+        .testimonial-slider::-webkit-scrollbar {
+            display: none;
+        }
+        .testimonial-slider {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
     </style>
 </head>
-<body class="bg-background text-textdark font-sans antialiased">
-    <div id="preloader" class="fixed inset-0 bg-primary z-[9999] flex items-center justify-center preloader-transition opacity-100">
-        <div class="text-center">
-            <div class="wave-animation mb-4" role="status" aria-label="Caricamento in corso">
-                <i class="fas fa-umbrella-beach text-6xl text-background"></i>
-            </div>
-            <p class="text-background font-bold text-lg">Lido La Perla</p>
-            <p class="text-background text-sm mt-2" aria-live="polite">Preparando la tua oasi di relax...</p>
-        </div>
-    </div>
-
-    <header class="bg-primary text-textlight sticky top-0 z-40 shadow-lg">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <i class="fas fa-umbrella-beach text-2xl text-secondary mr-2" aria-hidden="true"></i>
-                <a href="#home" class="text-xl font-bold font-serif" aria-label="Lido La Perla Home">Lido La Perla</a>
-            </div>
+<body class="bg-sand-50 text-gray-800">
+    <header class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50 transition-all duration-300 ease-in-out py-3">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center group">
+                <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-3 transition-all duration-300 group-hover:scale-110">
+                    <i class="fas fa-umbrella-beach text-blue-600 text-xl"></i>
+                </div>
+                <h1 class="serif-title text-xl md:text-2xl font-medium">Lido <span class="text-blue-600">La Perla</span></h1>
+            </a>
             
-            <nav class="hidden md:block" aria-label="Main Navigation">
-                <ul class="flex space-x-6">
-                    <li><a href="#home" class="hover:text-secondary transition duration-300">Home</a></li>
-                    <li><a href="#servizi" class="hover:text-secondary transition duration-300">Servizi</a></li>
-                    <li><a href="#prenotazioni" class="hover:text-secondary transition duration-300">Prenotazioni</a></li>
-                    <li><a href="#gallery" class="hover:text-secondary transition duration-300">Gallery</a></li>
-                    <li><a href="#contatti" class="hover:text-secondary transition duration-300">Contatti</a></li>
-                </ul>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-blue-600 transition duration-200 ease-in-out">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition duration-200 ease-in-out">Chi Siamo</a>
+                <a href="#services" class="hover:text-blue-600 transition duration-200 ease-in-out">Servizi</a>
+                <a href="#menu" class="hover:text-blue-600 transition duration-200 ease-in-out">Menu</a>
+                <a href="#gallery" class="hover:text-blue-600 transition duration-200 ease-in-out">Gallery</a>
+                <a href="#contact" class="hover:text-blue-600 transition duration-200 ease-in-out">Contatti</a>
             </nav>
             
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-textlight focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-primary" aria-label="Open mobile menu" aria-controls="mobile-menu" aria-expanded="false">
-                    <i class="fas fa-bars text-2xl"></i>
+            <div class="flex items-center space-x-4">
+                <a href="#book" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition duration-300 shadow-md transform hover:scale-105">
+                    Prenota Ora
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1">
+                    <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
-            
-            <a href="tel:+390771464921" class="hidden md:flex items-center bg-accent hover:bg-orange-600 text-textlight px-4 py-2 rounded-lg transition duration-300 transform hover:scale-105">
-                <i class="fas fa-phone mr-2" aria-hidden="true"></i> Chiamaci
-            </a>
         </div>
         
-        <div id="mobile-menu" class="hidden md:hidden bg-primary pb-4" role="menu" aria-labelledby="mobile-menu-button">
-            <ul class="flex flex-col space-y-3 px-4">
-                <li><a href="#home" class="block py-2 hover:text-secondary transition duration-300" role="menuitem">Home</a></li>
-                <li><a href="#servizi" class="block py-2 hover:text-secondary transition duration-300" role="menuitem">Servizi</a></li>
-                <li><a href="#prenotazioni" class="block py-2 hover:text-secondary transition duration-300" role="menuitem">Prenotazioni</a></li>
-                <li><a href="#gallery" class="block py-2 hover:text-secondary transition duration-300" role="menuitem">Gallery</a></li>
-                <li><a href="#contatti" class="block py-2 hover:text-secondary transition duration-300" role="menuitem">Contatti</a></li>
-                <li>
-                    <a href="tel:+390771464921" class="flex items-center justify-center bg-accent hover:bg-orange-600 text-textlight px-4 py-2 rounded-lg transition duration-300 transform hover:scale-105 mt-3" role="menuitem">
-                        <i class="fas fa-phone mr-2" aria-hidden="true"></i> Chiamaci
-                    </a>
-                </li>
-            </ul>
+        <div id="mobile-menu" class="hidden md:hidden bg-white w-full px-4 py-3 shadow-md transition-all duration-300 ease-in-out overflow-hidden">
+            <div class="flex flex-col space-y-3">
+                <a href="#home" class="hover:text-blue-600 transition py-1 block">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition py-1 block">Chi Siamo</a>
+                <a href="#services" class="hover:text-blue-600 transition py-1 block">Servizi</a>
+                <a href="#menu" class="hover:text-blue-600 transition py-1 block">Menu</a>
+                <a href="#gallery" class="hover:text-blue-600 transition py-1 block">Gallery</a>
+                <a href="#contact" class="hover:text-blue-600 transition py-1 block">Contatti</a>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="relative h-screen flex items-center justify-center bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80')] bg-cover bg-center" role="banner">
-            <div class="hero-overlay absolute inset-0"></div>
-            <div class="container mx-auto px-4 z-10 text-center fade-in">
-                <h2 class="text-4xl md:text-6xl font-bold text-textlight mb-6 slide-up">Lido La Perla</h2>
-                <p class="text-xl md:text-2xl text-background mb-8 slide-up">La tua oasi di relax sulla spiaggia di Serapo</p>
-                <a href="#servizi" class="inline-block bg-secondary hover:bg-emerald-600 text-textlight px-8 py-3 rounded-lg text-lg font-semibold transition duration-300 transform hover:scale-105 slide-up" aria-label="Scopri i nostri servizi">
-                    Scopri i nostri servizi
+    <section id="home" class="hero-image h-screen flex items-center justify-center pt-16 relative">
+        <div class="container mx-auto px-4 text-center text-white animate-fadeInScale">
+            <h1 class="serif-title text-4xl md:text-6xl font-medium mb-4 drop-shadow-lg">Benvenuti a <span class="text-blue-200">Lido La Perla</span></h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow">La tua oasi di relax sulla splendida spiaggia di Serapo, Gaeta</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#book" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition duration-300 shadow-lg text-lg transform hover:scale-105">
+                    Prenota Ombrellone
+                </a>
+                <a href="#menu" class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-full transition duration-300 shadow-lg text-lg transform hover:scale-105">
+                    Scopri il Menu
                 </a>
             </div>
-            <div class="absolute bottom-10 left-0 right-0 text-center">
-                <a href="#servizi" class="inline-block text-textlight animate-bounce" aria-label="Scorri ai servizi">
-                    <i class="fas fa-chevron-down text-2xl" aria-hidden="true"></i>
-                </a>
-            </div>
-        </section>
+        </div>
+        
+        
+    </section>
 
-        <section class="py-16 bg-background" aria-labelledby="why-choose-us-heading">
-            <div class="container mx-auto px-4">
-                <h2 id="why-choose-us-heading" class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Perché sceglierci</h2>
+    <section id="about" class="py-16 bg-white animate-slideInUp">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">La Nostra Filosofia</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-sand-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-umbrella-beach text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="serif-title text-xl font-medium text-center mb-3">Relax sulla Sabbia</h3>
+                    <p class="text-center text-gray-700">Ombrelloni spaziosi e lettini comodi per goderti il sole e il mare cristallino di Serapo, con servizio al tuo posto.</p>
+                </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-textlight p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition duration-300 slide-up group">
-                        <div class="text-secondary text-4xl mb-4 bounce group-hover:text-primary transition duration-300">
-                            <i class="fas fa-water" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-primary mb-2">Acqua Cristallina</h3>
-                        <p class="text-gray-600">Goditi il mare più limpido della costa di Gaeta, perfetto per nuotare e rilassarti.</p>
+                <div class="bg-sand-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-child text-blue-600 text-2xl"></i>
                     </div>
-                    
-                    <div class="bg-textlight p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition duration-300 slide-up group">
-                        <div class="text-secondary text-4xl mb-4 bounce group-hover:text-primary transition duration-300">
-                            <i class="fas fa-umbrella-beach" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-primary mb-2">Servizi Esclusivi</h3>
-                        <p class="text-gray-600">Ombrelloni spaziosi, lettini comodi e tutto il comfort che meriti per la tua giornata al mare.</p>
+                    <h3 class="serif-title text-xl font-medium text-center mb-3">Family Friendly</h3>
+                    <p class="text-center text-gray-700">Servizi pensati per le famiglie. Accessibilità garantita per tutti, e parcheggio incluso per i clienti.</p>
+                </div>
+                
+                <div class="bg-sand-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-pizza-slice text-blue-600 text-2xl"></i>
                     </div>
-                    
-                    <div class="bg-textlight p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition duration-300 slide-up group">
-                        <div class="text-secondary text-4xl mb-4 bounce group-hover:text-primary transition duration-300">
-                            <i class="fas fa-utensils" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-primary mb-2">Cucina Genuina</h3>
-                        <p class="text-gray-600">Piatti freschi di pesce e specialità locali preparate con ingredienti di qualità.</p>
-                    </div>
-                    
-                    <div class="bg-textlight p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition duration-300 slide-up group">
-                        <div class="text-secondary text-4xl mb-4 bounce group-hover:text-primary transition duration-300">
-                            <i class="fas fa-parking" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-primary mb-2">Parcheggio Comodo</h3>
-                        <p class="text-gray-600">Parcheggio privato e riservato ai nostri clienti, direttamente adiacente alla struttura.</p>
-                    </div>
+                    <h3 class="serif-title text-xl font-medium text-center mb-3">Gusto Mediterraneo</h3>
+                    <p class="text-center text-gray-700">Pizza a legna, piatti di pesce fresco e specialità locali da gustare con vista mare nel nostro ristorante.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="py-16 bg-primary text-textlight" aria-labelledby="testimonials-heading">
-            <div class="container mx-auto px-4">
-                <h2 id="testimonials-heading" class="text-3xl md:text-4xl font-bold text-center mb-12">Cosa dicono di noi</h2>
-                
-                <div class="max-w-4xl mx-auto">
-                    <div id="testimonial-slider" class="relative overflow-hidden h-48 md:h-40">
-                        <div class="testimonial-slide active absolute w-full top-0 left-0">
-                            <div class="text-center">
-                                <div class="flex justify-center mb-4" role="img" aria-label="Valutazione 5 stelle">
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                </div>
-                                <p class="text-lg italic mb-6">"Il posto perfetto per rilassarsi! Spiaggia pulita, servizi eccellenti e personale gentilissimo. Torneremo sicuramente!"</p>
-                                <p class="font-bold">- Maria G.</p>
+ <section id="services" class="py-16 bg-sand-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">I Nostri Servizi</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/11/c8/3b/gli-ombrelloni.jpg?w=1000&h=-1&s=1');" loading="lazy"></div>
+                <div class="p-6">
+                    <div class="service-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-umbrella-beach text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="serif-title text-xl font-medium mb-2">Ombrelloni e Lettini</h3>
+                    <p class="mb-4 text-gray-700">Postazioni comode e spaziose con ombrelloni e lettini su prenotazione per garantirti il massimo comfort.</p>
+                    <a href="#book" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition duration-200">
+                        Prenota ora <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/da/2c/89/interno-del-ristorante.jpg?w=1000&h=-1&s=1');" loading="lazy"></div>
+                <div class="p-6">
+                    <div class="service-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-utensils text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="serif-title text-xl font-medium mb-2">Ristorante e Pizzeria</h3>
+                    <p class="mb-4 text-gray-700">Pizza a legna, piatti di pesce fresco e specialità locali servite direttamente al tuo ombrellone o nel nostro ristorante.</p>
+                    <a href="#menu" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition duration-200">
+                        Vedi il menu <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
+                <div class="h-48 bg-cover bg-center" style="background-image: url('https://th.bing.com/th/id/OIP.q73JxaKFK_9a9GxssMN_9wHaE0?rs=1&pid=ImgDetMain&cb=idpwebpc2');" loading="lazy"></div>
+                <div class="p-6">
+                    <div class="service-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-car-side text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="serif-title text-xl font-medium mb-2">Parcheggio Conveniente</h3>
+                    <p class="mb-4 text-gray-700">Per la tua comodità, offriamo parcheggio gratuito adiacente al lido, riservato esclusivamente ai nostri clienti. Potrai parcheggiare la tua auto senza pensieri e raggiungere facilmente il nostro ristorante o la spiaggia.</p>
+                    <a href="#gallery" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition duration-200">
+                        Scopri di più <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Il Nostro Menu</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4 text-gray-700">Piatti tradizionali e specialità mediterranee preparate con ingredienti freschi e locali</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="serif-title text-2xl font-medium mb-6 pb-2 border-b border-gray-200">Pizzeria a Legna</h3>
+                    <div class="space-y-6">
+                        <div class="flex menu-item items-center">
+                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                <img src="https://th.bing.com/th/id/R.d406a339343075ff627530c34ccb6b0b?rik=9C92C8pZ3TB5qA&pid=ImgRaw&r=0" alt="Pizza Margherita" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-lg">Margherita</h4>
+                                <p class="text-sm text-gray-600 mb-1">Pomodoro, mozzarella, basilico</p>
+                                <p class="text-blue-600 font-medium text-lg">€8,00</p>
                             </div>
                         </div>
                         
-                        <div class="testimonial-slide hidden absolute w-full top-0 left-0">
-                            <div class="text-center">
-                                <div class="flex justify-center mb-4" role="img" aria-label="Valutazione 5 stelle">
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                </div>
-                                <p class="text-lg italic mb-6">"Il ristorante è fantastico! Abbiamo mangiato il miglior pesce della vacanza. E il parcheggio privato è stato molto comodo."</p>
-                                <p class="font-bold">- Luca P.</p>
+                        <div class="flex menu-item items-center">
+                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                <img src="https://preview.redd.it/diavola-neapolitan-style-pizza-so-good-v0-4dlm64s7vppc1.jpeg?width=1080&crop=smart&auto=webp&s=38bc14e4b673a469f860349bc2d52a795fc9b940" alt="Pizza Diavola" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-lg">Diavola</h4>
+                                <p class="text-sm text-gray-600 mb-1">Pomodoro, mozzarella, salame piccante</p>
+                                <p class="text-blue-600 font-medium text-lg">€9,50</p>
                             </div>
                         </div>
                         
-                        <div class="testimonial-slide hidden absolute w-full top-0 left-0">
-                            <div class="text-center">
-                                <div class="flex justify-center mb-4" role="img" aria-label="Valutazione 5 stelle">
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                    <i class="fas fa-star text-goldstar mx-1" aria-hidden="true"></i>
-                                </div>
-                                <p class="text-lg italic mb-6">"I nostri bambini si sono divertiti tantissimo nell'area giochi. Abbiamo passato una giornata perfetta in famiglia!"</p>
-                                <p class="font-bold">- Elena R.</p>
+                        <div class="flex menu-item items-center">
+                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                <img src="https://th.bing.com/th/id/OIP.G5o2nORkKrlOR4A5KUPx4QHaE8?rs=1&pid=ImgDetMain&cb=idpwebpc2" alt="Pizza Frutti di Mare" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-lg">Marinara</h4>
+                                <p class="text-sm text-gray-600 mb-1">Pomodoro, aglio, origano secco, volio evo</p>
+                                <p class="text-blue-600 font-medium text-lg">€7,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="serif-title text-2xl font-medium mb-6 pb-2 border-b border-gray-200">Specialità di Pesce</h3>
+                    <div class="space-y-6">
+                        <div class="flex menu-item items-center">
+                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/87/83/7b/photo3jpg.jpg?w=1000&h=-1&s=1" alt="Spaghetti alle Vongole" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-lg">Spaghetti alle Vongole</h4>
+                                <p class="text-sm text-gray-600 mb-1">Vongole veraci, aglio, prezzemolo, vino bianco</p>
+                                <p class="text-blue-600 font-medium text-lg">€14,00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex menu-item items-center">
+                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/27/0b/aa/photo2jpg.jpg?w=1000&h=-1&s=1" alt="Frittura di Paranza" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-lg">Frittura </h4>
+                                <p class="text-sm text-gray-600 mb-1">Gamberi e Calamari fritti</p>
+                                <p class="text-blue-600 font-medium text-lg">€12,00</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex menu-item items-center">
+                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/32/c4/d9/caption.jpg?w=1000&h=-1&s=1" alt="Tiella di Gaeta" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-medium text-lg">Crudi di Mare</h4>
+                                <p class="text-sm text-gray-600 mb-1">Molluschi, Crostacei</p>
+                                <p class="text-blue-600 font-medium text-lg">€17,00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition duration-300 shadow-lg transform hover:scale-105" aria-label="Scarica il Menu Completo in PDF">
+                    <i class="fas fa-download mr-2"></i> Scarica il Menu Completo (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+   <section id="book" class="py-16 bg-blue-600 text-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Prenota il Tuo Posto</h2>
+            <div class="w-24 h-1 bg-white mx-auto"></div>
+            <p class="max-w-2xl mx-auto mt-4">Riserva il tuo ombrellone o tavolo al ristorante per goderti una giornata indimenticabile</p>
+        </div>
+
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+            <div class="bg-blue-700 px-6 py-4">
+                <h3 class="serif-title text-xl font-medium text-white">Prenota ora telefonicamente!</h3>
+            </div>
+
+            <div class="p-6 text-gray-800 text-center">
+                <p class="text-lg mb-4">Per prenotare il tuo ombrellone o tavolo al ristorante, ti preghiamo di contattarci telefonicamente.</p>
+                <p class="text-3xl font-bold text-blue-600 mb-6">
+                    <a href="tel:+390612345678" class="hover:underline">+39 0771 464921</a>
+                </p>
+                <p class="text-md">Siamo disponibili per le prenotazioni durante i nostri orari di apertura.</p>
+            </div>
+        </div>
+    </div></section>
+<section id="gallery" class="py-16 bg-sand-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4 text-gray-800">La Nostra Gallery</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto">
+        </div></div>
+
+        <div class="instagram-gallery grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/da/2b/f4/ingresso-del-ristorante.jpg?w=1000&h=-1&s=1" alt="Spiaggia al tramonto" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <i class="fab fa-instagram text-white text-3xl"></i>
+                </div>
+            </div>
+
+            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ec/57/39/photo0jpg.jpg?w=1000&h=-1&s=1" alt="Pizza a legna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <i class="fab fa-instagram text-white text-3xl"></i>
+                </div>
+            </div>
+
+            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/c4/71/df/la-perla.jpg?w=1000&h=-1&s=1" alt="Cena vista mare" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <i class="fab fa-instagram text-white text-3xl"></i>
+                </div>
+            </div>
+
+            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/da/2c/f4/interno-del-ristorante.jpg?w=1000&h=-1&s=1" alt="Aperitivo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <i class="fab fa-instagram text-white text-3xl"></i>
+                </div>
+            </div>
+
+            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/50/a3/e4/ristorante-interno-vista.jpg?w=1000&h=-1&s=1" alt="Beach volley" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <i class="fab fa-instagram text-white text-3xl"></i>
+                </div>
+            </div>
+
+            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/da/8b/3c/la-perla.jpg?w=1000&h=-1&s=1" alt="Tramonto sulla spiaggia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <i class="fab fa-instagram text-white text-3xl"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-200">
+                <i class="fab fa-instagram text-2xl mr-2"></i> Seguici su Instagram per altre foto
+            </a>
+        </div>
+    </div>
+</section>
+    </section>
+
+     <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Cosa Dicono di Noi</h2>
+            <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+
+        <div class="testimonial-slider flex overflow-x-auto pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory" id="testimonialSlider">
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWGebXUVBE1z907WLMoHPhyqrGNXXB_fCarYnIagDHT9vSQt0o3=s64-c-rp-mo-ba4-br100" alt="Maria Rossi" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-medium">rudi fritsch</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Regentag. Nette Brauchbar. Aperol Spritzz mit Blick aufs Meer"</p>
+                </div>
+            </div>
+
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWcn3Q8UhNgpzp1O8GFk3-xO4dIGUzPr-56o77L4Y4968PvUyey4Q=w72-h72-p-rp-mo-ba4-br100" alt="Luigi Bianchi" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-medium">Anna De Martino</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Ottimo posto per famiglie e per giovani.. Tranquillo e pulito.. Tutto ciò che ti serve."</p>
+                </div>
+            </div>
+
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjX8WKeb3Q0B-ZBJDO75_hRBDZwr-J0_q-UG7ZqFEH9Z-wz-AFCg=s64-c-rp-mo-ba5-br100" alt="Giulia Verdi" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-medium">Antonia Camicioli</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Ottima posizione, vicino alla scogliera ma non a ridosso, ombrelloni color beige come la sabbia, stabilimento pulito, ben frequentato, con bar e piante, personale corretto, educato, disponibile, lo consiglio per un'estate al mare"</p>
+                </div>
+            </div>
+            <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWbwKrzG5T_30lLHYzp9U3THXh2BCABTyCA7Ev609xxPW_hMoVMZA=w72-h72-p-rp-mo-ba3-br100" alt="Marco Gialli" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-medium">Armida Del Sette</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"un primo posto meritatissimo per questo ristorante anche in bassissima stagione, non solo per l'ottimo cibo ma anche per la professionalità e simpatia dello staff"</p>
+                </div>
+            </div>
+             <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Chiara Neri" class="w-full h-full object-cover">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-medium">Chiara Neri</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Un'esperienza davvero rilassante. La possibilità di ordinare direttamente dall'ombrellone è un plus non da poco. Torneremo l'anno prossimo!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const slider = document.getElementById('testimonialSlider');
+        const slides = Array.from(slider.querySelectorAll('.testimonial-slide'));
+        let currentSlideIndex = 0;
+
+        function scrollTestimonials() {
+            currentSlideIndex++;
+            if (currentSlideIndex >= slides.length) {
+                currentSlideIndex = 0; // Torna alla prima slide
+            }
+
+            const targetSlide = slides[currentSlideIndex];
+            const scrollPosition = targetSlide.offsetLeft - (slider.clientWidth / 2) + (targetSlide.clientWidth / 2);
+
+            slider.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Fai scorrere ogni 3 secondi (puoi modificare il valore)
+        setInterval(scrollTestimonials, 3000);
+
+        // Opzionale: Ferma lo scorrimento al passaggio del mouse e riprendi quando il mouse esce
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(scrollInterval);
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            scrollInterval = setInterval(scrollTestimonials, 3000);
+        });
+
+        let scrollInterval = setInterval(scrollTestimonials, 3000);
+    });
+</script>
+    <section id="contact" class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Contattaci</h2>
+                <div class="w-24 h-1 bg-white mx-auto"></div>
+                <p class="max-w-2xl mx-auto mt-4">Siamo qui per rendere la tua esperienza indimenticabile</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="serif-title text-2xl font-medium mb-6">Dove Trovarci</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-200 text-2xl mr-4"></i>
+                            <div>
+                                <p class="font-medium">Indirizzo:</p>
+                                <p>Lido La Perla, Via Lungomare Caboto, 04024 Gaeta (LT)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-200 text-2xl mr-4"></i>
+                            <div>
+                                <p class="font-medium">Telefono:</p>
+                                <p><a href="tel:+390771123456" class="hover:underline">+39 0771 464921</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-200 text-2xl mr-4"></i>
+                            <div>
+                                <p class="font-medium">Email:</p>
+                                <p><a href="mailto:info@lidolaperla.it" class="hover:underline">lidolaperlasas@hotmail.it</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-blue-200 text-2xl mr-4"></i>
+                            <div>
+                                <p class="font-medium">Orari:</p>
+                                <p>Tutti i giorni: 08:00 - 00:00</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="flex justify-center mt-8" role="tablist" aria-label="Recensioni dei clienti">
-                        <button class="testimonial-dot w-3 h-3 rounded-full bg-secondary mx-1 focus:outline-none focus:ring-2 focus:ring-goldstar focus:ring-offset-2 focus:ring-offset-primary active-dot" aria-label="Mostra recensione 1" role="tab" aria-selected="true"></button>
-                        <button class="testimonial-dot w-3 h-3 rounded-full bg-secondary mx-1 focus:outline-none focus:ring-2 focus:ring-goldstar focus:ring-offset-2 focus:ring-offset-primary" aria-label="Mostra recensione 2" role="tab" aria-selected="false"></button>
-                        <button class="testimonial-dot w-3 h-3 rounded-full bg-secondary mx-1 focus:outline-none focus:ring-2 focus:ring-goldstar focus:ring-offset-2 focus:ring-offset-primary" aria-label="Mostra recensione 3" role="tab" aria-selected="false"></button>
+                    <div class="mt-8 flex space-x-6">
+                        <a href="#" class="text-blue-200 hover:text-white transition transform hover:scale-110" aria-label="Facebook"><i class="fab fa-facebook-f text-3xl"></i></a>
+                        <a href="#" class="text-blue-200 hover:text-white transition transform hover:scale-110" aria-label="Instagram"><i class="fab fa-instagram text-3xl"></i></a>
+                        <a href="#" class="text-blue-200 hover:text-white transition transform hover:scale-110" aria-label="WhatsApp"><i class="fab fa-whatsapp text-3xl"></i></a>
                     </div>
                 </div>
+                
+              <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1490.4300808298717!2d13.56844960309919!3d41.20875959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bb17b6a6c4293%3A0x6b432a9a7d3c0e1!2sLido%20La%20Perla!5e0!3m2!1sit!2sit!4v1719230303000!5m2!1sit!2sit"
+  width="100%"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</section>
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <a href="#home" class="serif-title text-2xl font-medium hover:text-blue-200 transition">Lido <span class="text-blue-600">La Perla</span></a>
             </div>
-        </section>
-
-        <section class="py-16 bg-background" aria-labelledby="services-preview-heading">
-            <div class="container mx-auto px-4">
-                <h2 id="services-preview-heading" class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">I nostri servizi</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="relative overflow-hidden rounded-lg shadow-lg group slide-up">
-                        <img 
-                            src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=600&auto=format&fit=crop" 
-                            srcset="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop 400w, 
-                                    https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=800&auto=format&fit=crop 800w"
-                            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                            alt="Spiaggia e lettini del Lido La Perla" 
-                            class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" 
-                            loading="lazy"
-                            width="800" height="600"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent flex items-end p-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-textlight mb-2">Spiaggia & Relax</h3>
-                                <a href="#spiaggia" class="inline-block bg-accent hover:bg-orange-600 text-textlight px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">
-                                    Scopri di più
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="relative overflow-hidden rounded-lg shadow-lg group slide-up">
-                        <img 
-                            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600&auto=format&fit=crop" 
-                            srcset="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=400&auto=format&fit=crop 400w, 
-                                    https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=800&auto=format&fit=crop 800w"
-                            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                            alt="Ristorante del Lido La Perla con piatti di mare" 
-                            class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" 
-                            loading="lazy"
-                            width="800" height="600"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent flex items-end p-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-textlight mb-2">Ristorazione</h3>
-                                <a href="#ristorazione" class="inline-block bg-accent hover:bg-orange-600 text-textlight px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">
-                                    Scopri di più
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="relative overflow-hidden rounded-lg shadow-lg group slide-up">
-                        <img 
-                            src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600&auto=format&fit=crop" 
-                            srcset="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400&auto=format&fit=crop 400w, 
-                                    https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop 800w"
-                            sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
-                            alt="Ingresso del parcheggio del Lido La Perla" 
-                            class="w-full h-64 object-cover transition duration-500 group-hover:scale-110" 
-                            loading="lazy"
-                            width="800" height="600"
-                        >
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent flex items-end p-6">
-                            <div>
-                                <h3 class="text-2xl font-bold text-textlight mb-2">Parcheggio</h3>
-                                <a href="#parcheggio" class="inline-block bg-accent hover:bg-orange-600 text-textlight px-4 py-2 rounded-lg text-sm font-semibold transition duration-300">
-                                    Scopri di più
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex flex-wrap justify-center space-x-6 mb-6">
+                <a href="#home" class="hover:text-blue-400 transition">Home</a>
+                <a href="#about" class="hover:text-blue-400 transition">Chi Siamo</a>
+                <a href="#services" class="hover:text-blue-400 transition">Servizi</a>
+                <a href="#menu" class="hover:text-blue-400 transition">Menu</a>
+                <a href="#gallery" class="hover:text-blue-400 transition">Gallery</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contatti</a>
             </div>
-        </section>
-
-        <section id="servizi" class="py-16 bg-textlight" aria-labelledby="full-services-heading">
-            <div class="container mx-auto px-4">
-                <h2 id="full-services-heading" class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">I nostri servizi nel dettaglio</h2>
-                
-                <div id="spiaggia" class="mb-20 slide-up" aria-labelledby="beach-heading">
-                    <div class="flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                            <h3 id="beach-heading" class="text-2xl font-bold text-primary mb-4">Spiaggia & Relax</h3>
-                            <p class="text-gray-700 mb-4">Ombrelloni e lettini spaziosi, cabine private, docce calde/fredde e aree comuni ombreggiate per il tuo comfort.</p>
-                            <p class="text-gray-700 mb-6">Tutti i nostri ombrelloni sono posizionati a distanza adeguata per garantire privacy e relax, con vista diretta sul mare cristallino di Serapo.</p>
-                            <div class="bg-background p-4 rounded-lg">
-                                <h4 class="font-bold text-primary mb-2">Noleggio attrezzature:</h4>
-                                <ul class="space-y-2 text-gray-700">
-                                    <li class="flex items-center"><i class="fas fa-umbrella-beach text-secondary mr-2" aria-hidden="true"></i> Ombrellone + 2 lettini: <span class="font-semibold text-primary">€25/giorno</span></li>
-                                    <li class="flex items-center"><i class="fas fa-home text-secondary mr-2" aria-hidden="true"></i> Cabina privata: <span class="font-semibold text-primary">€35/giorno</span></li>
-                                    <li class="flex items-center"><i class="fas fa-towel text-secondary mr-2" aria-hidden="true"></i> Asciugamani: <span class="font-semibold text-primary">€5/giorno</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2">
-                            <div class="grid grid-cols-2 gap-4">
-                                <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop" alt="Spiaggia pulita del lido" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400&auto=format&fit=crop" alt="Cabine private in legno" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1561484930-974554019ade?q=80&w=400&auto=format&fit=crop" alt="Comodi lettini sulla sabbia" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35ad58?q=80&w=400&auto=format&fit=crop" alt="Docce esterne per il risciacquo" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="ristorazione" class="mb-20 slide-up" aria-labelledby="dining-heading">
-                    <div class="flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 order-2 md:order-1">
-                            <div class="grid grid-cols-2 gap-4">
-                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=400&auto=format&fit=crop" alt="Interno del ristorante con tavoli preparati" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=400&auto=format&fit=crop" alt="Piatto di pesce fresco con verdure" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=400&auto=format&fit=crop" alt="Bancone bar con bottiglie e bicchieri" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=400&auto=format&fit=crop" alt="Cocktail estivi colorati" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8 order-1 md:order-2">
-                            <h3 id="dining-heading" class="text-2xl font-bold text-primary mb-4">Ristorazione</h3>
-                            <div class="mb-6">
-                                <h4 class="font-bold text-secondary mb-2">Bar</h4>
-                                <p class="text-gray-700">Il nostro bar offre bevande fresche, caffè, gelati artigianali e snack per ogni momento della giornata. Prova i nostri cocktail estivi preparati con frutta fresca!</p>
-                            </div>
-                            <div class="mb-6">
-                                <h4 class="font-bold text-secondary mb-2">Ristorante</h4>
-                                <p class="text-gray-700">Assapora i sapori autentici del mare nel nostro ristorante. Piatti freschi di pesce, specialità locali e opzioni leggere per una pausa gustosa. Prenotazione consigliata per il pranzo e la cena.</p>
-                            </div>
-                            <a href="/path/to/your/menu.pdf" target="_blank" rel="noopener noreferrer" class="inline-block bg-secondary hover:bg-emerald-600 text-textlight px-6 py-2 rounded-lg font-semibold transition duration-300">
-                                <i class="fas fa-download mr-2" aria-hidden="true"></i> Scarica il nostro menù
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="divertimento" class="mb-20 slide-up" aria-labelledby="activities-heading">
-                    <div class="flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-                            <h3 id="activities-heading" class="text-2xl font-bold text-primary mb-4">Divertimento & Attività</h3>
-                            <p class="text-gray-700 mb-4">Area giochi attrezzata per i più piccoli, noleggio pedalò e SUP per esplorare la costa e serate a tema con musica dal vivo per un divertimento assicurato.</p>
-                            <p class="text-gray-700 mb-6">Ogni settimana organizziamo eventi speciali per tutta la famiglia, tra cui tornei di beach volley, lezioni di yoga al mattino e serate musicali con DJ set.</p>
-                            <div class="bg-background p-4 rounded-lg">
-                                <h4 class="font-bold text-primary mb-2">Noleggio attrezzature:</h4>
-                                <ul class="space-y-2 text-gray-700">
-                                    <li class="flex items-center"><i class="fas fa-ship text-secondary mr-2" aria-hidden="true"></i> Pedalò: <span class="font-semibold text-primary">€15/ora</span></li>
-                                    <li class="flex items-center"><i class="fas fa-water text-secondary mr-2" aria-hidden="true"></i> SUP: <span class="font-semibold text-primary">€12/ora</span></li>
-                                    <li class="flex items-center"><i class="fas fa-volleyball-ball text-secondary mr-2" aria-hidden="true"></i> Beach volley: <span class="font-semibold text-primary">gratuito</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="md:w-1/2">
-                            <div class="grid grid-cols-2 gap-4">
-                                <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=400&auto=format&fit=crop" alt="Bambini che giocano nell'area dedicata" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=400&auto=format&fit=crop" alt="Persone su un pedalò in mare" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=400&auto=format&fit=crop" alt="Partita di beach volley sulla spiaggia" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=400&auto=format&fit=crop" alt="Concerto o DJ set serale" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="parcheggio" class="slide-up" aria-labelledby="parking-heading">
-                    <div class="flex flex-col md:flex-row items-center">
-                        <div class="md:w-1/2 order-2 md:order-1">
-                            <div class="grid grid-cols-2 gap-4">
-                                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400&auto=format&fit=crop" alt="Vista aerea del parcheggio" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=400&auto=format&fit=crop" alt="Mappa indicativa del parcheggio" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=400&auto=format&fit=crop" alt="Accesso veicolare al parcheggio" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=400&auto=format&fit=crop" alt="Area parcheggio sorvegliata" class="w-full h-48 object-cover rounded-lg shadow-md hover:shadow-xl transition duration-300" loading="lazy" width="400" height="300">
-                            </div>
-                        </div>
-                        <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8 order-1 md:order-2">
-                            <h3 id="parking-heading" class="text-2xl font-bold text-primary mb-4">Parcheggio Privato</h3>
-                            <p class="text-gray-700 mb-4">Il Lido La Perla mette a disposizione dei suoi clienti un ampio parcheggio privato situato direttamente adiacente alla struttura.</p>
-                            <p class="text-gray-700 mb-6">Dimentica lo stress della ricerca e goditi la tua giornata in totale tranquillità. Il parcheggio è gratuito e riservato esclusivamente ai nostri ospiti.</p>
-                            
-                            <div class="bg-background p-4 rounded-lg mb-6">
-                                <h4 class="font-bold text-primary mb-2">Informazioni:</h4>
-                                <ul class="space-y-2 text-gray-700">
-                                    <li class="flex items-center"><i class="fas fa-car text-secondary mr-2" aria-hidden="true"></i> Posti disponibili: <span class="font-semibold text-primary">50</span></li>
-                                    <li class="flex items-center"><i class="fas fa-euro-sign text-secondary mr-2" aria-hidden="true"></i> <span class="font-semibold text-primary">Gratuito</span> per i clienti del lido</li>
-                                    <li class="flex items-center"><i class="fas fa-lock text-secondary mr-2" aria-hidden="true"></i> <span class="font-semibold text-primary">Sorvegliato 24/7</span></li>
-                                    <li class="flex items-center"><i class="fas fa-wheelchair text-secondary mr-2" aria-hidden="true"></i> Posti per disabili disponibili</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="p-4 border border-secondary rounded-lg">
-                                <h4 class="font-bold text-primary mb-2">Come raggiungerci:</h4>
-                                <p class="text-gray-700 mb-2">Il parcheggio si trova a soli 50 metri dalla spiaggia, con accesso diretto al lido.</p>
-                                <address class="text-gray-700 not-italic">
-                                    Indirizzo: Via Marina di Serapo, 1, 04024 Gaeta LT
-                                </address>
-                                <a href="https://maps.app.goo.gl/YOUR_Maps_LINK" target="_blank" rel="noopener noreferrer" class="inline-block mt-4 text-secondary hover:text-primary transition duration-300">
-                                    <i class="fas fa-map-marker-alt mr-2" aria-hidden="true"></i> Apri su Google Maps
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <p class="text-gray-400 text-sm">&copy; 2025 Lido La Perla. Tutti i diritti riservati. Design by Michael Liguori.</p>
+            <div class="mt-4 text-gray-400 text-sm">
+                <a href="#" class="hover:underline mx-2">Privacy Policy</a> | 
+                <a href="#" class="hover:underline mx-2">Termini e Condizioni</a>
             </div>
-        </section>
-
-        <section id="prenotazioni" class="py-16 bg-background" aria-labelledby="booking-heading">
-            <div class="container mx-auto px-4 text-center">
-                <h2 id="booking-heading" class="text-3xl md:text-4xl font-bold text-primary mb-6">Prenota il tuo angolo di paradiso!</h2>
-                <p class="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">Per garantirti la migliore esperienza e assicurarti il tuo ombrellone e i tuoi lettini, ti invitiamo a prenotare comodamente via telefono.</p>
-                
-                <div class="bg-textlight p-8 rounded-lg shadow-lg inline-block mb-8 slide-up">
-                    <div class="flex items-center justify-center mb-4">
-                        <i class="fas fa-phone-volume text-4xl text-secondary mr-4 pulse" aria-hidden="true"></i>
-                        <a href="tel:+390771464921" class="text-3xl md:text-4xl font-bold text-primary hover:text-secondary transition duration-300" aria-label="Chiama per prenotare: più trentanove zero sette sette uno quattro sei quattro nove due uno">+39 0771 464921</a>
-                    </div>
-                    <p class="text-gray-600">Disponibili per le prenotazioni dal 1° giugno al 15 settembre, tutti i giorni dalle 08:30 alle 18:00.</p>
-                </div>
-                
-                <div class="max-w-2xl mx-auto bg-primary text-textlight p-6 rounded-lg shadow-md slide-up">
-                    <h3 class="text-xl font-bold mb-4">Consigli utili per la prenotazione:</h3>
-                    <ul class="text-left space-y-2 text-gray-200">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-secondary mr-2 mt-1" aria-hidden="true"></i> Ricorda di specificare il giorno desiderato, il numero di persone e eventuali preferenze (es. prima fila).</li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-secondary mr-2 mt-1" aria-hidden="true"></i> Per richieste last minute, consigliamo di chiamare con un certo anticipo.</li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-secondary mr-2 mt-1" aria-hidden="true"></i> Prenotazioni per gruppi superiori a 10 persone richiedono almeno 48 ore di anticipo.</li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-secondary mr-2 mt-1" aria-hidden="true"></i> In caso di maltempo, le prenotazioni possono essere annullate o spostate senza penale.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="py-16 bg-textlight" aria-labelledby="gallery-heading">
-            <div class="container mx-auto px-4">
-                <h2 id="gallery-heading" class="text-3xl md:text-4xl font-bold text-center text-primary mb-12">Immergiti nella nostra bellezza</h2>
-                
-                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <a href="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1473&auto=format&fit=crop" class="gallery-item group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300" aria-label="Vedi immagine ingrandita della spiaggia">
-                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop" alt="Spiaggia del Lido La Perla" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="400" height="300">
-                        <div class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg">
-                            <i class="fas fa-search-plus text-textlight text-2xl" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1473&auto=format&fit=crop" class="gallery-item group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300" aria-label="Vedi immagine ingrandita della spiaggia">
-                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop" alt="Spiaggia del Lido La Perla" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="400" height="300">
-                        <div class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg">
-                            <i class="fas fa-search-plus text-textlight text-2xl" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1473&auto=format&fit=crop" class="gallery-item group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300" aria-label="Vedi immagine ingrandita della spiaggia">
-                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop" alt="Spiaggia del Lido La Perla" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="400" height="300">
-                        <div class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg">
-                            <i class="fas fa-search-plus text-textlight text-2xl" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1473&auto=format&fit=crop" class="gallery-item group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300" aria-label="Vedi immagine ingrandita della spiaggia">
-                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop" alt="Spiaggia del Lido La Perla" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="400" height="300">
-                        <div class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg">
-                            <i class="fas fa-search-plus text-textlight text-2xl" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1473&auto=format&fit=crop" class="gallery-item group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300" aria-label="Vedi immagine ingrandita della spiaggia">
-                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop" alt="Spiaggia del Lido La Perla" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="400" height="300">
-                        <div class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg">
-                            <i class="fas fa-search-plus text-textlight text-2xl" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1473&auto=format&fit=crop" class="gallery-item group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300" aria-label="Vedi immagine ingrandita della spiaggia">
-                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop" alt="Spiaggia del Lido La Perla" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="400" height="300">
-                        <div class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg">
-                            <i class="fas fa-search-plus text-textlight text-2xl" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1473&auto=format&fit=crop" class="gallery-item group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300" aria-label="Vedi immagine ingrandita della spiaggia">
-                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop" alt="Spiaggia del Lido La Perla" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="400" height="300">
-                        <div class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg">
-                            <i class="fas fa-search-plus text-textlight text-2xl" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                    <a href="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=1473&auto=format&fit=crop" class="gallery-item group relative block overflow-hidden rounded-lg shadow-md hover:shadow-xl transition duration-300" aria-label="Vedi immagine ingrandita della spiaggia">
-                        <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?q=80&w=400&auto=format&fit=crop" alt="Spiaggia del Lido La Perla" class="w-full h-48 object-cover transition duration-500 group-hover:scale-110" loading="lazy" width="400" height="300">
-                        <div class="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 rounded-lg">
-                            <i class="fas fa-search-plus text-textlight text-2xl" aria-hidden="true"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contatti" class="py-16 bg-primary text-textlight" aria-labelledby="contact-heading">
-            <div class="container mx-auto px-4 text-center">
-                <h2 id="contact-heading" class="text-3xl md:text-4xl font-bold mb-8">Contattaci</h2>
-                <p class="text-lg mb-8 max-w-2xl mx-auto">Siamo qui per rispondere a tutte le tue domande e aiutarti a pianificare la tua perfetta giornata al mare. Non esitare a contattarci!</p>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-textlight text-primary p-6 rounded-lg shadow-lg slide-up">
-                        <i class="fas fa-phone-alt text-4xl mb-4 text-secondary" aria-hidden="true"></i>
-                        <h3 class="text-xl font-bold mb-2">Telefono</h3>
-                        <p class="text-lg"><a href="tel:+390771464921" class="hover:text-secondary transition duration-300">+39 0771 464921</a></p>
-                        <p class="text-sm text-gray-600">Disponibili: 08:30 - 18:00</p>
-                    </div>
-                    <div class="bg-textlight text-primary p-6 rounded-lg shadow-lg slide-up">
-                        <i class="fas fa-envelope text-4xl mb-4 text-secondary" aria-hidden="true"></i>
-                        <h3 class="text-xl font-bold mb-2">Email</h3>
-                        <p class="text-lg"><a href="mailto:info@lidolaperla.it" class="hover:text-secondary transition duration-300">info@lidolaperla.it</a></p>
-                        <p class="text-sm text-gray-600">Rispondiamo entro 24 ore</p>
-                    </div>
-                    <div class="bg-textlight text-primary p-6 rounded-lg shadow-lg slide-up">
-                        <i class="fas fa-map-marker-alt text-4xl mb-4 text-secondary" aria-hidden="true"></i>
-                        <h3 class="text-xl font-bold mb-2">Indirizzo</h3>
-                        <address class="text-lg not-italic">
-                            Via Marina di Serapo, 1<br>
-                            04024 Gaeta LT, Italia
-                        </address>
-                        <a href="https://maps.app.goo.gl/YOUR_Maps_LINK" target="_blank" rel="noopener noreferrer" class="inline-block mt-2 text-sm hover:text-secondary transition duration-300">
-                            Vedi sulla mappa
-                        </a>
-                    </div>
-                </div>
-
-                <div class="mt-12">
-                    <h3 class="text-2xl font-bold mb-6">Seguici sui Social</h3>
-                    <div class="flex justify-center space-x-6 text-3xl">
-                        <a href="https://facebook.com/lidolaperla" target="_blank" rel="noopener noreferrer" class="text-textlight hover:text-secondary transition duration-300" aria-label="Seguici su Facebook">
-                            <i class="fab fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="https://instagram.com/lidolaperla" target="_blank" rel="noopener noreferrer" class="text-textlight hover:text-secondary transition duration-300" aria-label="Seguici su Instagram">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-primary text-textlight py-8">
-        <div class="container mx-auto px-4 text-center text-sm">
-            <p>© 2025 Lido La Perla. Tutti i diritti riservati.</p>
-            <p class="mt-2">
-                <a href="#privacy-policy" class="hover:text-secondary transition duration-300">Privacy Policy</a> | 
-                <a href="#cookie-policy" class="hover:text-secondary transition duration-300">Cookie Policy</a>
-            </p>
-            <p class="mt-4 text-gray-400">Design & Sviluppo di [Il Tuo Nome/Azienda]</p>
         </div>
     </footer>
 
     <script>
-        // Preloader Script
-        const preloader = document.getElementById('preloader');
-        const minDisplayTime = 500; // Tempo minimo in ms per mostrare il preloader
-        let loadStartTime = performance.now(); // Inizia a misurare il tempo di caricamento
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-        window.addEventListener('load', () => {
-            const loadEndTime = performance.now();
-            const actualLoadTime = loadEndTime - loadStartTime;
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    // Add/remove a class for potential height transition if needed
+                    // For now, Tailwind's 'hidden' handles display toggle
+                });
 
-            if (actualLoadTime < minDisplayTime) {
-                setTimeout(() => {
-                    preloader.classList.add('opacity-0', 'pointer-events-none');
-                    preloader.addEventListener('transitionend', () => preloader.remove(), { once: true });
-                }, minDisplayTime - actualLoadTime);
-            } else {
-                preloader.classList.add('opacity-0', 'pointer-events-none');
-                preloader.addEventListener('transitionend', () => preloader.remove(), { once: true });
+                // Close mobile menu when a link is clicked
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Smooth Scroll for Navigation Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Intersection Observer for animations (optional, for more controlled animations)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-slideInUp');
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section:not(#home)').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Hero section specific animation
+            const heroSection = document.getElementById('home');
+            if (heroSection) {
+                heroSection.querySelector('.animate-fadeInScale').classList.add('animate-fadeInScale');
             }
         });
-
-        // Mobile Menu Toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuLinks = mobileMenu.querySelectorAll('a');
-
-        mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Chiudi menu mobile al click su un link
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenuButton.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-
-        // Testimonial Slider
-        const testimonialSlider = document.getElementById('testimonial-slider');
-        const testimonialSlides = testimonialSlider.querySelectorAll('.testimonial-slide');
-        const testimonialDots = testimonialSlider.querySelectorAll('.testimonial-dot');
-        let currentSlide = 0;
-        let slideInterval;
-        const slideDuration = 7000; // 7 secondi per slide
-
-        function showSlide(index) {
-            testimonialSlides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                slide.classList.add('hidden');
-                testimonialDots[i].classList.remove('active-dot', 'bg-accent');
-                testimonialDots[i].classList.add('bg-secondary');
-                testimonialDots[i].setAttribute('aria-selected', 'false');
-            });
-
-            testimonialSlides[index].classList.remove('hidden');
-            testimonialSlides[index].classList.add('active');
-            testimonialDots[index].classList.add('active-dot', 'bg-accent');
-            testimonialDots[index].setAttribute('aria-selected', 'true');
-
-            currentSlide = index;
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % testimonialSlides.length;
-            showSlide(currentSlide);
-        }
-
-        function startSlider() {
-            slideInterval = setInterval(nextSlide, slideDuration);
-        }
-
-        function pauseSlider() {
-            clearInterval(slideInterval);
-        }
-
-        testimonialDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                pauseSlider();
-                showSlide(index);
-                startSlider();
-            });
-        });
-
-        testimonialSlider.addEventListener('mouseenter', pauseSlider);
-        testimonialSlider.addEventListener('mouseleave', startSlider);
-        
-        showSlide(currentSlide);
-        startSlider();
     </script>
 </body>
 </html>
