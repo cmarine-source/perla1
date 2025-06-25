@@ -459,7 +459,7 @@
         </div>
 
         <div class="testimonial-slider flex overflow-x-auto pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory" id="testimonialSlider">
-            <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
                 <div class="bg-sand-50 rounded-lg p-6 shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden">
@@ -480,7 +480,7 @@
                 </div>
             </div>
 
-            <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
                 <div class="bg-sand-50 rounded-lg p-6 shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden">
@@ -501,7 +501,7 @@
                 </div>
             </div>
 
-            <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
                 <div class="bg-sand-50 rounded-lg p-6 shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden">
@@ -521,7 +521,8 @@
                     <p>"Ottima posizione, vicino alla scogliera ma non a ridosso, ombrelloni color beige come la sabbia, stabilimento pulito, ben frequentato, con bar e piante, personale corretto, educato, disponibile, lo consiglio per un'estate al mare"</p>
                 </div>
             </div>
-            <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+
+            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
                 <div class="bg-sand-50 rounded-lg p-6 shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden">
@@ -541,7 +542,8 @@
                     <p>"un primo posto meritatissimo per questo ristorante anche in bassissima stagione, non solo per l'ottimo cibo ma anche per la professionalità e simpatia dello staff"</p>
                 </div>
             </div>
-             <div class="testimonial-slide flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4 snap-center">
+
+            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
                 <div class="bg-sand-50 rounded-lg p-6 shadow-md">
                     <div class="flex items-center mb-4">
                         <div class="w-12 h-12 rounded-full overflow-hidden">
@@ -570,6 +572,7 @@
         const slider = document.getElementById('testimonialSlider');
         const slides = Array.from(slider.querySelectorAll('.testimonial-slide'));
         let currentSlideIndex = 0;
+        let scrollInterval; // Dichiarata all'esterno per essere accessibile
 
         function scrollTestimonials() {
             currentSlideIndex++;
@@ -577,17 +580,19 @@
                 currentSlideIndex = 0; // Torna alla prima slide
             }
 
-            const targetSlide = slides[currentSlideIndex];
-            const scrollPosition = targetSlide.offsetLeft - (slider.clientWidth / 2) + (targetSlide.clientWidth / 2);
+            // Calcola la posizione esatta di scorrimento.
+            // .offsetLeft è la posizione dell'elemento rispetto al bordo sinistro del suo elemento offsetParent.
+            // Poiché ogni slide è w-full e ha lo stesso padding orizzontale, offsetLeft dovrebbe bastare.
+            const targetScrollLeft = slides[currentSlideIndex].offsetLeft;
 
             slider.scrollTo({
-                left: scrollPosition,
+                left: targetScrollLeft,
                 behavior: 'smooth'
             });
         }
 
-        // Fai scorrere ogni 3 secondi (puoi modificare il valore)
-        setInterval(scrollTestimonials, 3000);
+        // Avvia lo scorrimento automatico ogni 4 secondi (tempo richiesto)
+        scrollInterval = setInterval(scrollTestimonials, 2000); // 4000 millisecondi = 4 secondi
 
         // Opzionale: Ferma lo scorrimento al passaggio del mouse e riprendi quando il mouse esce
         slider.addEventListener('mouseenter', () => {
@@ -595,10 +600,8 @@
         });
 
         slider.addEventListener('mouseleave', () => {
-            scrollInterval = setInterval(scrollTestimonials, 3000);
+            scrollInterval = setInterval(scrollTestimonials, 2000); // Riprende con 4 secondi
         });
-
-        let scrollInterval = setInterval(scrollTestimonials, 3000);
     });
 </script>
     <section id="contact" class="py-16 bg-blue-600 text-white">
