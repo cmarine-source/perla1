@@ -130,7 +130,7 @@
         }
     </style>
 </head>
-<body class="bg-sand-50 text-gray-800">
+<body class="flex flex-col min-h-screen bg-sand-50 text-gray-800">
     <header class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50 transition-all duration-300 ease-in-out py-3">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="#home" class="flex items-center group">
@@ -153,7 +153,7 @@
                 <a href="#book" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full transition duration-300 shadow-md transform hover:scale-105">
                     Prenota Ora
                 </a>
-                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1">
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none rounded p-1">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
@@ -171,499 +171,441 @@
         </div>
     </header>
 
-    <section id="home" class="hero-image h-screen flex items-center justify-center pt-16 relative">
-        <div class="container mx-auto px-4 text-center text-white animate-fadeInScale">
-            <h1 class="serif-title text-4xl md:text-6xl font-medium mb-4 drop-shadow-lg">Benvenuti a <span class="text-blue-200">Lido La Perla</span></h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow">La tua oasi di relax sulla splendida spiaggia di Serapo, Gaeta</p>
-            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#book" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition duration-300 shadow-lg text-lg transform hover:scale-105">
-                    Prenota Ombrellone
-                </a>
-                <a href="#menu" class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-full transition duration-300 shadow-lg text-lg transform hover:scale-105">
-                    Scopri il Menu
-                </a>
-            </div>
-        </div>
-        
-        
-    </section>
-
-    <section id="about" class="py-16 bg-white animate-slideInUp">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">La Nostra Filosofia</h2>
-                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
-            </div>
-            
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-                <div class="bg-sand-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-umbrella-beach text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="serif-title text-xl font-medium text-center mb-3">Relax sulla Sabbia</h3>
-                    <p class="text-center text-gray-700">Ombrelloni spaziosi e lettini comodi per goderti il sole e il mare cristallino di Serapo, con servizio al tuo posto.</p>
-                </div>
-                
-                <div class="bg-sand-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-child text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="serif-title text-xl font-medium text-center mb-3">Family Friendly</h3>
-                    <p class="text-center text-gray-700">Servizi pensati per le famiglie. Accessibilità garantita per tutti, e parcheggio incluso per i clienti.</p>
-                </div>
-                
-                <div class="bg-sand-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
-                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-pizza-slice text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="serif-title text-xl font-medium text-center mb-3">Gusto Mediterraneo</h3>
-                    <p class="text-center text-gray-700">Pizza a legna, piatti di pesce fresco e specialità locali da gustare con vista mare nel nostro ristorante.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
- <section id="services" class="py-16 bg-sand-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">I Nostri Servizi</h2>
-            <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="h-48 bg-cover bg-center" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/11/c8/3b/gli-ombrelloni.jpg?w=1000&h=-1&s=1');" loading="lazy"></div>
-                <div class="p-6">
-                    <div class="service-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-umbrella-beach text-blue-600 text-xl"></i>
-                    </div>
-                    <h3 class="serif-title text-xl font-medium mb-2">Ombrelloni e Lettini</h3>
-                    <p class="mb-4 text-gray-700">Postazioni comode e spaziose con ombrelloni e lettini su prenotazione per garantirti il massimo comfort.</p>
-                    <a href="#book" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition duration-200">
-                        Prenota ora <i class="fas fa-arrow-right ml-2"></i>
+    <div class="flex-grow">
+        <section id="home" class="hero-image h-screen flex items-center justify-center pt-16 relative">
+            <div class="container mx-auto px-4 text-center text-white animate-fadeInScale">
+                <h1 class="serif-title text-4xl md:text-6xl font-medium mb-4 drop-shadow-lg">Benvenuti a <span class="text-blue-200">Lido La Perla</span></h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto drop-shadow">La tua oasi di relax sulla splendida spiaggia di Serapo, Gaeta</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#book" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition duration-300 shadow-lg text-lg transform hover:scale-105">
+                        Prenota Ombrellone
+                    </a>
+                    <a href="#menu" class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-full transition duration-300 shadow-lg text-lg transform hover:scale-105">
+                        Scopri il Menu
                     </a>
                 </div>
             </div>
+        </section>
 
-            <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="h-48 bg-cover bg-center" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/da/2c/89/interno-del-ristorante.jpg?w=1000&h=-1&s=1');" loading="lazy"></div>
-                <div class="p-6">
-                    <div class="service-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-utensils text-blue-600 text-xl"></i>
-                    </div>
-                    <h3 class="serif-title text-xl font-medium mb-2">Ristorante e Pizzeria</h3>
-                    <p class="mb-4 text-gray-700">Pizza a legna, piatti di pesce fresco e specialità locali servite direttamente al tuo ombrellone o nel nostro ristorante.</p>
-                    <a href="#menu" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition duration-200">
-                        Vedi il menu <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
-                <div class="h-48 bg-cover bg-center" style="background-image: url('https://th.bing.com/th/id/OIP.q73JxaKFK_9a9GxssMN_9wHaE0?rs=1&pid=ImgDetMain&cb=idpwebpc2');" loading="lazy"></div>
-                <div class="p-6">
-                    <div class="service-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="fas fa-car-side text-blue-600 text-xl"></i>
-                    </div>
-                    <h3 class="serif-title text-xl font-medium mb-2">Parcheggio Conveniente</h3>
-                    <p class="mb-4 text-gray-700">Per la tua comodità, offriamo parcheggio gratuito adiacente al lido, riservato esclusivamente ai nostri clienti. Potrai parcheggiare la tua auto senza pensieri e raggiungere facilmente il nostro ristorante o la spiaggia.</p>
-                    <a href="#gallery" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition duration-200">
-                        Scopri di più <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <section id="menu" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Il Nostro Menu</h2>
-                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
-                <p class="max-w-2xl mx-auto mt-4 text-gray-700">Piatti tradizionali e specialità mediterranee preparate con ingredienti freschi e locali</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div>
-                    <h3 class="serif-title text-2xl font-medium mb-6 pb-2 border-b border-gray-200">Pizzeria a Legna</h3>
-                    <div class="space-y-6">
-                        <div class="flex menu-item items-center">
-                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
-                                <img src="https://th.bing.com/th/id/R.d406a339343075ff627530c34ccb6b0b?rik=9C92C8pZ3TB5qA&pid=ImgRaw&r=0" alt="Pizza Margherita" class="w-full h-full object-cover menu-item-image" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-medium text-lg">Margherita</h4>
-                                <p class="text-sm text-gray-600 mb-1">Pomodoro, mozzarella, basilico</p>
-                                <p class="text-blue-600 font-medium text-lg">€8,00</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex menu-item items-center">
-                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
-                                <img src="https://preview.redd.it/diavola-neapolitan-style-pizza-so-good-v0-4dlm64s7vppc1.jpeg?width=1080&crop=smart&auto=webp&s=38bc14e4b673a469f860349bc2d52a795fc9b940" alt="Pizza Diavola" class="w-full h-full object-cover menu-item-image" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-medium text-lg">Diavola</h4>
-                                <p class="text-sm text-gray-600 mb-1">Pomodoro, mozzarella, salame piccante</p>
-                                <p class="text-blue-600 font-medium text-lg">€9,50</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex menu-item items-center">
-                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
-                                <img src="https://th.bing.com/th/id/OIP.G5o2nORkKrlOR4A5KUPx4QHaE8?rs=1&pid=ImgDetMain&cb=idpwebpc2" alt="Pizza Frutti di Mare" class="w-full h-full object-cover menu-item-image" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-medium text-lg">Marinara</h4>
-                                <p class="text-sm text-gray-600 mb-1">Pomodoro, aglio, origano secco, volio evo</p>
-                                <p class="text-blue-600 font-medium text-lg">€7,00</p>
-                            </div>
-                        </div>
-                    </div>
+        <section id="about" class="py-16 bg-white animate-slideInUp">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">La Nostra Filosofia</h2>
+                    <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
                 </div>
                 
-                <div>
-                    <h3 class="serif-title text-2xl font-medium mb-6 pb-2 border-b border-gray-200">Specialità di Pesce</h3>
-                    <div class="space-y-6">
-                        <div class="flex menu-item items-center">
-                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
-                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/87/83/7b/photo3jpg.jpg?w=1000&h=-1&s=1" alt="Spaghetti alle Vongole" class="w-full h-full object-cover menu-item-image" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-medium text-lg">Spaghetti alle Vongole</h4>
-                                <p class="text-sm text-gray-600 mb-1">Vongole veraci, aglio, prezzemolo, vino bianco</p>
-                                <p class="text-blue-600 font-medium text-lg">€14,00</p>
-                            </div>
+                <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                    <div class="bg-sand-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-umbrella-beach text-blue-600 text-2xl"></i>
                         </div>
-                        
-                        <div class="flex menu-item items-center">
-                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
-                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/27/0b/aa/photo2jpg.jpg?w=1000&h=-1&s=1" alt="Frittura di Paranza" class="w-full h-full object-cover menu-item-image" loading="lazy">
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="font-medium text-lg">Frittura </h4>
-                                <p class="text-sm text-gray-600 mb-1">Gamberi e Calamari fritti</p>
-                                <p class="text-blue-600 font-medium text-lg">€12,00</p>
-                            </div>
+                        <h3 class="serif-title text-xl font-medium text-center mb-3">Relax sulla Sabbia</h3>
+                        <p class="text-center text-gray-700">Ombrelloni spaziosi e lettini comodi per goderti il sole e il mare cristallino di Serapo, con servizio al tuo posto.</p>
+                    </div>
+                    
+                    <div class="bg-sand-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-child text-blue-600 text-2xl"></i>
                         </div>
-                        
-                        <div class="flex menu-item items-center">
-                            <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
-                                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/32/c4/d9/caption.jpg?w=1000&h=-1&s=1" alt="Tiella di Gaeta" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                        <h3 class="serif-title text-xl font-medium text-center mb-3">Family Friendly</h3>
+                        <p class="text-center text-gray-700">Servizi pensati per le famiglie. Accessibilità garantita per tutti, e parcheggio incluso per i clienti.</p>
+                    </div>
+                    
+                    <div class="bg-sand-50 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-pizza-slice text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="serif-title text-xl font-medium text-center mb-3">Gusto Mediterraneo</h3>
+                        <p class="text-center text-gray-700">Pizza a legna, piatti di pesce fresco e specialità locali da gustare con vista mare nel nostro ristorante.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 bg-sand-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">I Nostri Servizi</h2>
+                    <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/11/c8/3b/gli-ombrelloni.jpg?w=1000&h=-1&s=1');" loading="lazy"></div>
+                        <div class="p-6">
+                            <div class="service-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-umbrella-beach text-blue-600 text-xl"></i>
                             </div>
-                            <div class="ml-4">
-                                <h4 class="font-medium text-lg">Crudi di Mare</h4>
-                                <p class="text-sm text-gray-600 mb-1">Molluschi, Crostacei</p>
-                                <p class="text-blue-600 font-medium text-lg">€17,00</p>
+                            <h3 class="serif-title text-xl font-medium mb-2">Ombrelloni e Lettini</h3>
+                            <p class="mb-4 text-gray-700">Postazioni comode e spaziose con ombrelloni e lettini su prenotazione per garantirti il massimo comfort.</p>
+                            <a href="#book" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition duration-200">
+                                Prenota ora <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/da/2c/89/interno-del-ristorante.jpg?w=1000&h=-1&s=1');" loading="lazy"></div>
+                        <div class="p-6">
+                            <div class="service-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-utensils text-blue-600 text-xl"></i>
                             </div>
+                            <h3 class="serif-title text-xl font-medium mb-2">Ristorante e Pizzeria</h3>
+                            <p class="mb-4 text-gray-700">Pizza a legna, piatti di pesce fresco e specialità locali servite direttamente al tuo ombrellone o nel nostro ristorante.</p>
+                            <a href="#menu" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition duration-200">
+                                Vedi il menu <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="service-card bg-white rounded-lg overflow-hidden shadow-md">
+                        <div class="h-48 bg-cover bg-center" style="background-image: url('https://th.bing.com/th/id/OIP.q73JxaKFK_9a9GxssMN_9wHaE0?rs=1&pid=ImgDetMain&cb=idpwebpc2');" loading="lazy"></div>
+                        <div class="p-6">
+                            <div class="service-icon w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-car-side text-blue-600 text-xl"></i>
+                            </div>
+                            <h3 class="serif-title text-xl font-medium mb-2">Parcheggio Conveniente</h3>
+                            <p class="mb-4 text-gray-700">Per la tua comodità, offriamo parcheggio gratuito adiacente al lido, riservato esclusivamente ai nostri clienti. Potrai parcheggiare la tua auto senza pensieri e raggiungere facilmente il nostro ristorante o la spiaggia.</p>
+                            <a href="#gallery" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition duration-200">
+                                Scopri di più <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center">
-                <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition duration-300 shadow-lg transform hover:scale-105" aria-label="Scarica il Menu Completo in PDF">
-                    <i class="fas fa-download mr-2"></i> Scarica il Menu Completo (PDF)
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-   <section id="book" class="py-16 bg-blue-600 text-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Prenota il Tuo Posto</h2>
-            <div class="w-24 h-1 bg-white mx-auto"></div>
-            <p class="max-w-2xl mx-auto mt-4">Riserva il tuo ombrellone o tavolo al ristorante per goderti una giornata indimenticabile</p>
-        </div>
-
-        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
-            <div class="bg-blue-700 px-6 py-4">
-                <h3 class="serif-title text-xl font-medium text-white">Prenota ora telefonicamente!</h3>
-            </div>
-
-            <div class="p-6 text-gray-800 text-center">
-                <p class="text-lg mb-4">Per prenotare il tuo ombrellone o tavolo al ristorante, ti preghiamo di contattarci telefonicamente.</p>
-                <p class="text-3xl font-bold text-blue-600 mb-6">
-                    <a href="tel:+390612345678" class="hover:underline">+39 0771 464921</a>
-                </p>
-                <p class="text-md">Siamo disponibili per le prenotazioni durante i nostri orari di apertura.</p>
-            </div>
-        </div>
-    </div></section>
-<section id="gallery" class="py-16 bg-sand-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4 text-gray-800">La Nostra Gallery</h2>
-            <div class="w-24 h-1 bg-blue-500 mx-auto">
-        </div></div>
-
-        <div class="instagram-gallery grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/da/2b/f4/ingresso-del-ristorante.jpg?w=1000&h=-1&s=1" alt="Spiaggia al tramonto" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
-                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <i class="fab fa-instagram text-white text-3xl"></i>
+        <section id="menu" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Il Nostro Menu</h2>
+                    <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                    <p class="max-w-2xl mx-auto mt-4 text-gray-700">Piatti tradizionali e specialità mediterranee preparate con ingredienti freschi e locali</p>
                 </div>
-            </div>
-
-            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ec/57/39/photo0jpg.jpg?w=1000&h=-1&s=1" alt="Pizza a legna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
-                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <i class="fab fa-instagram text-white text-3xl"></i>
-                </div>
-            </div>
-
-            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/c4/71/df/la-perla.jpg?w=1000&h=-1&s=1" alt="Cena vista mare" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
-                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <i class="fab fa-instagram text-white text-3xl"></i>
-                </div>
-            </div>
-
-            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/da/2c/f4/interno-del-ristorante.jpg?w=1000&h=-1&s=1" alt="Aperitivo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
-                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <i class="fab fa-instagram text-white text-3xl"></i>
-                </div>
-            </div>
-
-            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/50/a3/e4/ristorante-interno-vista.jpg?w=1000&h=-1&s=1" alt="Beach volley" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
-                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <i class="fab fa-instagram text-white text-3xl"></i>
-                </div>
-            </div>
-
-            <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
-                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/da/8b/3c/la-perla.jpg?w=1000&h=-1&s=1" alt="Tramonto sulla spiaggia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
-                <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <i class="fab fa-instagram text-white text-3xl"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-12">
-            <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-200">
-                <i class="fab fa-instagram text-2xl mr-2"></i> Seguici su Instagram per altre foto
-            </a>
-        </div>
-    </div>
-</section>
-    </section>
-
-     <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Cosa Dicono di Noi</h2>
-            <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
-        </div>
-
-        <div class="testimonial-slider flex overflow-x-auto pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory" id="testimonialSlider">
-            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
-                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden">
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWGebXUVBE1z907WLMoHPhyqrGNXXB_fCarYnIagDHT9vSQt0o3=s64-c-rp-mo-ba4-br100" alt="Maria Rossi" class="w-full h-full object-cover">
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="font-medium">rudi fritsch</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div>
+                        <h3 class="serif-title text-2xl font-medium mb-6 pb-2 border-b border-gray-200">Pizzeria a Legna</h3>
+                        <div class="space-y-6">
+                            <div class="flex menu-item items-center">
+                                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                    <img src="https://th.bing.com/th/id/R.d406a339343075ff627530c34ccb6b0b?rik=9C92C8pZ3TB5qA&pid=ImgRaw&r=0" alt="Pizza Margherita" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium text-lg">Margherita</h4>
+                                    <p class="text-sm text-gray-600 mb-1">Pomodoro, mozzarella, basilico</p>
+                                    <p class="text-blue-600 font-medium text-lg">€8,00</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <p>"Regentag. Nette Brauchbar. Aperol Spritzz mit Blick aufs Meer"</p>
-                </div>
-            </div>
-
-            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
-                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden">
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWcn3Q8UhNgpzp1O8GFk3-xO4dIGUzPr-56o77L4Y4968PvUyey4Q=w72-h72-p-rp-mo-ba4-br100" alt="Luigi Bianchi" class="w-full h-full object-cover">
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="font-medium">Anna De Martino</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                            
+                            <div class="flex menu-item items-center">
+                                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                    <img src="https://preview.redd.it/diavola-neapolitan-style-pizza-so-good-v0-4dlm64s7vppc1.jpeg?width=1080&crop=smart&auto=webp&s=38bc14e4b673a469f860349bc2d52a795fc9b940" alt="Pizza Diavola" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium text-lg">Diavola</h4>
+                                    <p class="text-sm text-gray-600 mb-1">Pomodoro, mozzarella, salame piccante</p>
+                                    <p class="text-blue-600 font-medium text-lg">€9,50</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <p>"Ottimo posto per famiglie e per giovani.. Tranquillo e pulito.. Tutto ciò che ti serve."</p>
-                </div>
-            </div>
-
-            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
-                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden">
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjX8WKeb3Q0B-ZBJDO75_hRBDZwr-J0_q-UG7ZqFEH9Z-wz-AFCg=s64-c-rp-mo-ba5-br100" alt="Giulia Verdi" class="w-full h-full object-cover">
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="font-medium">Antonia Camicioli</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"Ottima posizione, vicino alla scogliera ma non a ridosso, ombrelloni color beige come la sabbia, stabilimento pulito, ben frequentato, con bar e piante, personale corretto, educato, disponibile, lo consiglio per un'estate al mare"</p>
-                </div>
-            </div>
-
-            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
-                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden">
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWbwKrzG5T_30lLHYzp9U3THXh2BCABTyCA7Ev609xxPW_hMoVMZA=w72-h72-p-rp-mo-ba3-br100" alt="Marco Gialli" class="w-full h-full object-cover">
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="font-medium">Armida Del Sette</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"un primo posto meritatissimo per questo ristorante anche in bassissima stagione, non solo per l'ottimo cibo ma anche per la professionalità e simpatia dello staff"</p>
-                </div>
-            </div>
-
-            <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
-                <div class="bg-sand-50 rounded-lg p-6 shadow-md">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 rounded-full overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Chiara Neri" class="w-full h-full object-cover">
-                        </div>
-                        <div class="ml-4">
-                            <h4 class="font-medium">Chiara Neri</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"Un'esperienza davvero rilassante. La possibilità di ordinare direttamente dall'ombrellone è un plus non da poco. Torneremo l'anno prossimo!"</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const slider = document.getElementById('testimonialSlider');
-        const slides = Array.from(slider.querySelectorAll('.testimonial-slide'));
-        let currentSlideIndex = 0;
-        let scrollInterval; // Dichiarata all'esterno per essere accessibile
-
-        function scrollTestimonials() {
-            currentSlideIndex++;
-            if (currentSlideIndex >= slides.length) {
-                currentSlideIndex = 0; // Torna alla prima slide
-            }
-
-            // Calcola la posizione esatta di scorrimento.
-            // .offsetLeft è la posizione dell'elemento rispetto al bordo sinistro del suo elemento offsetParent.
-            // Poiché ogni slide è w-full e ha lo stesso padding orizzontale, offsetLeft dovrebbe bastare.
-            const targetScrollLeft = slides[currentSlideIndex].offsetLeft;
-
-            slider.scrollTo({
-                left: targetScrollLeft,
-                behavior: 'smooth'
-            });
-        }
-
-        // Avvia lo scorrimento automatico ogni 4 secondi (tempo richiesto)
-        scrollInterval = setInterval(scrollTestimonials, 2000); // 4000 millisecondi = 4 secondi
-
-        // Opzionale: Ferma lo scorrimento al passaggio del mouse e riprendi quando il mouse esce
-        slider.addEventListener('mouseenter', () => {
-            clearInterval(scrollInterval);
-        });
-
-        slider.addEventListener('mouseleave', () => {
-            scrollInterval = setInterval(scrollTestimonials, 2000); // Riprende con 4 secondi
-        });
-    });
-</script>
-    <section id="contact" class="py-16 bg-blue-600 text-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Contattaci</h2>
-                <div class="w-24 h-1 bg-white mx-auto"></div>
-                <p class="max-w-2xl mx-auto mt-4">Siamo qui per rendere la tua esperienza indimenticabile</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="serif-title text-2xl font-medium mb-6">Dove Trovarci</h3>
-                    <div class="space-y-6">
-                        <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-blue-200 text-2xl mr-4"></i>
-                            <div>
-                                <p class="font-medium">Indirizzo:</p>
-                                <p>Lido La Perla, Via Lungomare Caboto, 04024 Gaeta (LT)</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-phone text-blue-200 text-2xl mr-4"></i>
-                            <div>
-                                <p class="font-medium">Telefono:</p>
-                                <p><a href="tel:+390771123456" class="hover:underline">+39 0771 464921</a></p>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-envelope text-blue-200 text-2xl mr-4"></i>
-                            <div>
-                                <p class="font-medium">Email:</p>
-                                <p><a href="mailto:info@lidolaperla.it" class="hover:underline">lidolaperlasas@hotmail.it</a></p>
-                            </div>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-clock text-blue-200 text-2xl mr-4"></i>
-                            <div>
-                                <p class="font-medium">Orari:</p>
-                                <p>Tutti i giorni: 08:00 - 00:00</p>
+                            
+                            <div class="flex menu-item items-center">
+                                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                    <img src="https://th.bing.com/th/id/OIP.G5o2nORkKrlOR4A5KUPx4QHaE8?rs=1&pid=ImgDetMain&cb=idpwebpc2" alt="Pizza Frutti di Mare" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium text-lg">Marinara</h4>
+                                    <p class="text-sm text-gray-600 mb-1">Pomodoro, aglio, origano secco, volio evo</p>
+                                    <p class="text-blue-600 font-medium text-lg">€7,00</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="mt-8 flex space-x-6">
-                        <a href="#" class="text-blue-200 hover:text-white transition transform hover:scale-110" aria-label="Facebook"><i class="fab fa-facebook-f text-3xl"></i></a>
-                        <a href="#" class="text-blue-200 hover:text-white transition transform hover:scale-110" aria-label="Instagram"><i class="fab fa-instagram text-3xl"></i></a>
-                        <a href="#" class="text-blue-200 hover:text-white transition transform hover:scale-110" aria-label="WhatsApp"><i class="fab fa-whatsapp text-3xl"></i></a>
+                    <div>
+                        <h3 class="serif-title text-2xl font-medium mb-6 pb-2 border-b border-gray-200">Specialità di Pesce</h3>
+                        <div class="space-y-6">
+                            <div class="flex menu-item items-center">
+                                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/87/83/7b/photo3jpg.jpg?w=1000&h=-1&s=1" alt="Spaghetti alle Vongole" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium text-lg">Spaghetti alle Vongole</h4>
+                                    <p class="text-sm text-gray-600 mb-1">Vongole veraci, aglio, prezzemolo, vino bianco</p>
+                                    <p class="text-blue-600 font-medium text-lg">€14,00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex menu-item items-center">
+                                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/27/0b/aa/photo2jpg.jpg?w=1000&h=-1&s=1" alt="Frittura di Paranza" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium text-lg">Frittura </h4>
+                                    <p class="text-sm text-gray-600 mb-1">Gamberi e Calamari fritti</p>
+                                    <p class="text-blue-600 font-medium text-lg">€12,00</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex menu-item items-center">
+                                <div class="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
+                                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2e/32/c4/d9/caption.jpg?w=1000&h=-1&s=1" alt="Tiella di Gaeta" class="w-full h-full object-cover menu-item-image" loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium text-lg">Crudi di Mare</h4>
+                                    <p class="text-sm text-gray-600 mb-1">Molluschi, Crostacei</p>
+                                    <p class="text-blue-600 font-medium text-lg">€17,00</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-              <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1490.4300808298717!2d13.56844960309919!3d41.20875959999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bb17b6a6c4293%3A0x6b432a9a7d3c0e1!2sLido%20La%20Perla!5e0!3m2!1sit!2sit!4v1719230303000!5m2!1sit!2sit"
-  width="100%"
-  height="450"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-</section>
-    <footer class="bg-gray-800 text-white py-10">
+                <div class="text-center">
+                    <a href="#" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full transition duration-300 shadow-lg transform hover:scale-105" aria-label="Scarica il Menu Completo in PDF">
+                        <i class="fas fa-download mr-2"></i> Scarica il Menu Completo (PDF)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="book" class="py-16 bg-blue-600 text-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Prenota il Tuo Posto</h2>
+                    <div class="w-24 h-1 bg-white mx-auto"></div>
+                    <p class="max-w-2xl mx-auto mt-4">Riserva il tuo ombrellone o tavolo al ristorante per goderti una giornata indimenticabile</p>
+                </div>
+
+                <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden">
+                    <div class="bg-blue-700 px-6 py-4">
+                        <h3 class="serif-title text-xl font-medium text-white">Prenota ora telefonicamente!</h3>
+                    </div>
+
+                    <div class="p-6 text-gray-800 text-center">
+                        <p class="text-lg mb-4">Per prenotare il tuo ombrellone o tavolo al ristorante, ti preghiamo di contattarci telefonicamente.</p>
+                        <p class="text-3xl font-bold text-blue-600 mb-6">
+                            <a href="tel:+390771464921" class="hover:underline">+39 0771 464921</a>
+                        </p>
+                        <p class="text-md">Siamo disponibili per le prenotazioni durante i nostri orari di apertura.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-16 bg-sand-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4 text-gray-800">La Nostra Gallery</h2>
+                    <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                </div>
+
+                <div class="instagram-gallery grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/da/2b/f4/ingresso-del-ristorante.jpg?w=1000&h=-1&s=1" alt="Spiaggia al tramonto" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-instagram text-white text-3xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/ec/57/39/photo0jpg.jpg?w=1000&h=-1&s=1" alt="Pizza a legna" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-instagram text-white text-3xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/c4/71/df/la-perla.jpg?w=1000&h=-1&s=1" alt="Cena vista mare" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-instagram text-white text-3xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/da/2c/f4/interno-del-ristorante.jpg?w=1000&h=-1&s=1" alt="Aperitivo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-instagram text-white text-3xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/50/a3/e4/ristorante-interno-vista.jpg?w=1000&h=-1&s=1" alt="Beach volley" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-instagram text-white text-3xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="relative aspect-square overflow-hidden rounded-lg shadow-md cursor-pointer group">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/da/8b/3c/la-perla.jpg?w=1000&h=-1&s=1" alt="Tramonto sulla spiaggia" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <i class="fab fa-instagram text-white text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition duration-200">
+                        <i class="fab fa-instagram text-2xl mr-2"></i> Seguici su Instagram per altre foto
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Cosa Dicono di Noi</h2>
+                    <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+                </div>
+
+                <div class="testimonial-slider flex overflow-x-auto pb-8 -mx-4 px-4 scrollbar-hide snap-x snap-mandatory" id="testimonialSlider">
+                    <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
+                        <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden">
+                                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjWGebXUVBE1z907WLMoHPhyqrGNXXB_fCarYnIagDHT9vSQt0o3=s64-c-rp-mo-ba4-br100" alt="Maria Rossi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">rudi fritsch</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Regentag. Nette Brauchbar. Aperol Spritzz mit Blick aufs Meer"</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
+                        <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden">
+                                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjWcn3Q8UhNgpzp1O8GFk3-xO4dIGUzPr-56o77L4Y4968PvUyey4Q=w72-h72-p-rp-mo-ba4-br100" alt="Luigi Bianchi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Anna De Martino</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Ottimo posto per famiglie e per giovani.. Tranquillo e pulito.. Tutto ciò che ti serve."</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
+                        <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden">
+                                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjX8WKeb3Q0B-ZBJDO75_hRBDZwr-J0_q-UG7ZqFEH9Z-wz-AFCg=s64-c-rp-mo-ba5-br100" alt="Giulia Verdi" class="w-full h-full object-cover">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Antonia Camicioli</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Ottima posizione, vicino alla scogliera ma non a ridosso, ombrelloni color beige come la sabbia, stabilimento pulito, ben frequentato, con bar e piante, personale corretto, educato, disponibile, lo consiglio per un'estate al mare"</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
+                        <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden">
+                                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjWbwKrzG5T_30lLHYzp9U3THXh2BCABTyCA7Ev609xxPW_hMoVMZA=w72-h72-p-rp-mo-ba3-br100" alt="Marco Gialli" class="w-full h-full object-cover">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Armida Del Sette</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"un primo posto meritatissimo per questo ristorante anche in bassissima stagione, non solo per l'ottimo cibo ma anche per la professionalità e simpatia dello staff"</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide flex-shrink-0 w-full px-4 snap-center">
+                        <div class="bg-sand-50 rounded-lg p-6 shadow-md">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden">
+                                    <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Chiara Neri" class="w-full h-full object-cover">
+                                </div>
+                                <div class="ml-4">
+                                    <h4 class="font-medium">Chiara Neri</h4>
+                                    <div class="flex text-yellow-400">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>"Un'esperienza davvero rilassante. La possibilità di ordinare direttamente dall'ombrellone è un plus non da poco. Torneremo l'anno prossimo!"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-blue-600 text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="serif-title text-3xl md:text-4xl font-medium mb-4">Contattaci</h2>
+                <div class="w-24 h-1 bg-white mx-auto mb-8"></div>
+                
+                <div class="max-w-2xl mx-auto grid md:grid-cols-2 gap-8 text-left">
+                    <div>
+                        <h3 class="font-medium text-xl mb-4">Dove Siamo</h3>
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> Via Serapo, 123, 04024 Gaeta LT</p>
+                        <p class="mb-4"><i class="fas fa-phone mr-2"></i> <a href="tel:+390771464921" class="hover:underline">+39 0771 464921</a></p>
+                        <p class="mb-4"><i class="fas fa-envelope mr-2"></i> <a href="mailto:info@lidolaperla.it" class="hover:underline">info@lidolaperla.it</a></p>
+                        
+                        <h3 class="font-medium text-xl mb-4">Orari di Apertura</h3>
+                        <p>Tutti i giorni: 9:00 - 23:00</p>
+                    </div>
+                    <div>
+                        <h3 class="font-medium text-xl mb-4">Seguici sui Social</h3>
+                        <div class="flex space-x-4 justify-center md:justify-start mb-6">
+                            <a href="#" class="text-white hover:text-blue-200 transition text-3xl" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-white hover:text-blue-200 transition text-3xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white hover:text-blue-200 transition text-3xl" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                        </div>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.918237905183!2d13.57018317666249!3d41.21147570808383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133ab2939611f7c3%3A0xc0953a99182e18b6!2sLido%20La%20Perla!5e0!3m2!1sit!2sit!4v1719246187788!5m2!1sit!2sit" 
+                            width="100%" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg shadow-md">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div> <footer class="bg-gray-800 text-white py-10">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-6">
                 <a href="#home" class="serif-title text-2xl font-medium hover:text-blue-200 transition">Lido <span class="text-blue-600">La Perla</span></a>
@@ -676,7 +618,7 @@
                 <a href="#gallery" class="hover:text-blue-400 transition">Gallery</a>
                 <a href="#contact" class="hover:text-blue-400 transition">Contatti</a>
             </div>
-            <p class="text-gray-400 text-sm">&copy; 2025 Lido La Perla. Tutti i diritti riservati. Design by Michael Liguori.</p>
+            <p class="text-gray-400 text-sm">© 2025 Lido La Perla. Tutti i diritti riservati. Design by Michael Liguori.</p>
             <div class="mt-4 text-gray-400 text-sm">
                 <a href="#" class="hover:underline mx-2">Privacy Policy</a> | 
                 <a href="#" class="hover:underline mx-2">Termini e Condizioni</a>
@@ -693,8 +635,6 @@
             if (mobileMenuButton && mobileMenu) {
                 mobileMenuButton.addEventListener('click', () => {
                     mobileMenu.classList.toggle('hidden');
-                    // Add/remove a class for potential height transition if needed
-                    // For now, Tailwind's 'hidden' handles display toggle
                 });
 
                 // Close mobile menu when a link is clicked
@@ -710,9 +650,20 @@
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
 
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        // Offset per l'altezza dell'header fisso
+                        const headerOffset = document.querySelector('header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                        const offsetPosition = elementPosition - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
 
@@ -741,6 +692,36 @@
             if (heroSection) {
                 heroSection.querySelector('.animate-fadeInScale').classList.add('animate-fadeInScale');
             }
+
+            // Testimonial Slider Script
+            const slider = document.getElementById('testimonialSlider');
+            const slides = Array.from(slider.querySelectorAll('.testimonial-slide'));
+            let currentSlideIndex = 0;
+            let scrollInterval; 
+
+            function scrollTestimonials() {
+                currentSlideIndex++;
+                if (currentSlideIndex >= slides.length) {
+                    currentSlideIndex = 0; 
+                }
+
+                const targetScrollLeft = slides[currentSlideIndex].offsetLeft;
+                
+                slider.scrollTo({
+                    left: targetScrollLeft,
+                    behavior: 'smooth'
+                });
+            }
+
+            scrollInterval = setInterval(scrollTestimonials, 4000); // 4 secondi
+
+            slider.addEventListener('mouseenter', () => {
+                clearInterval(scrollInterval);
+            });
+
+            slider.addEventListener('mouseleave', () => {
+                scrollInterval = setInterval(scrollTestimonials, 4000);
+            });
         });
     </script>
 </body>
